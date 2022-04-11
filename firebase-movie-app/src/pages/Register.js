@@ -1,16 +1,20 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createUser } from "../auth/firebase";
 
 const Register = () => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(firstname, lastname, email, password);
-  };
+    createUser(email, password, navigate);
 
+    console.log(firstName, lastName);
+  };
   return (
     <div className="d-flex justify-content-center">
       <div className="form-image">
@@ -28,7 +32,7 @@ const Register = () => {
               className="form-control"
               id="first-name"
               placeholder="Enter your first name.."
-              onChange={(e) => setFirstname(e.target.value)}
+              onChange={(e) => setFirstName(e.target.value)}
               required
             />
           </div>
@@ -41,7 +45,7 @@ const Register = () => {
               className="form-control"
               id="last-name"
               placeholder="Enter your last name.."
-              onChange={(e) => setLastname(e.target.value)}
+              onChange={(e) => setLastName(e.target.value)}
               required
             />
           </div>
@@ -75,7 +79,7 @@ const Register = () => {
             type="submit"
             className="btn btn-primary form-control"
             value="Register"
-            // onClick={handleSubmit}
+            // onSubmit={handleSubmit}
           />
         </form>
       </div>
