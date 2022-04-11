@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
 const Register = () => {
-
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(firstname, lastname, email, password);
+  };
 
   return (
     <div className="d-flex justify-content-center">
@@ -15,7 +18,7 @@ const Register = () => {
       </div>
       <div className="register-form">
         <h1 className="form-title display-3">Register</h1>
-        <form id="register">
+        <form id="register" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="first-name" className="form-label">
               First Name
@@ -26,6 +29,7 @@ const Register = () => {
               id="first-name"
               placeholder="Enter your first name.."
               onChange={(e) => setFirstname(e.target.value)}
+              required
             />
           </div>
           <div className="mb-3">
@@ -38,6 +42,7 @@ const Register = () => {
               id="last-name"
               placeholder="Enter your last name.."
               onChange={(e) => setLastname(e.target.value)}
+              required
             />
           </div>
           <div className="mb-3">
@@ -50,6 +55,7 @@ const Register = () => {
               id="email"
               placeholder="Enter your email adress.."
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="mb-3">
@@ -62,8 +68,15 @@ const Register = () => {
               id="password"
               placeholder="Enter your password.."
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
+          <input
+            type="submit"
+            className="btn btn-primary form-control"
+            value="Register"
+            // onClick={handleSubmit}
+          />
         </form>
       </div>
     </div>
