@@ -26,11 +26,14 @@ const Main = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (searchTerm && currentUser) {
+    if (searchTerm === "sex" || searchTerm === "porn") {
+      alert("Please enter a new word");
+    }
+    else if (searchTerm && currentUser) {
       getMovies(SEARCH_API + searchTerm);
     } else if (!currentUser) {
       alert("Please log in to search a movie");
-    } else {
+    }else {
       alert("Please enter a text");
     }
   };
