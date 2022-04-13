@@ -26,7 +26,7 @@ const Main = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (searchTerm === "sex" || searchTerm === "porn") {
+    if (searchTerm === "sex" || searchTerm === "porn" || searchTerm === "SEX" || searchTerm === "PORN") {
       alert("Please enter a new word");
     }
     else if (searchTerm && currentUser) {
