@@ -9,13 +9,13 @@ import {
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
-    apiKey: "AIzaSyD-r0Emk47bjG51LVXcZnSc5bBZgvdNX4Q",
-    authDomain: "movie-app-94e26.firebaseapp.com",
-    projectId: "movie-app-94e26",
-    storageBucket: "movie-app-94e26.appspot.com",
-    messagingSenderId: "822649945876",
-    appId: "1:822649945876:web:e800917a4b7e49ee2f4c01"
-  };
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
