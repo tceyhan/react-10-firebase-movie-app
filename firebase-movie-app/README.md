@@ -1,5 +1,6 @@
 # Project-010 : Movie App
 # https://react-10-firebase-movie-app.herokuapp.com/
+# https://react-10-firebase-movie-app.netlify.app/
 
 ## Description
 
