@@ -1,7 +1,6 @@
-<p>Clarusway<img align="right"
-  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
-
-# Project-008 : Movie App (RC-08)
+# Project-010 : Movie App
+# https://react-10-firebase-movie-app.herokuapp.com/
+# https://react-10-firebase-movie-app.netlify.app/
 
 ## Description
 
